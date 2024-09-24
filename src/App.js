@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import ItemInput from './Components/ItemInput';
+import ItemList from "./Components/ItemList";
 import './App.css';
 
-function App() {
+function ListaDeCompras() {
+  const [items, setItems] = useState([]);
+
+
+  const agregarItem = (item) => {
+    if (item && item.cantidad > 0) {
+      setItems([...items, item]);
+    }
+  };
+
+
+  const eliminarItem = (index) => {
+    const nuevosItems = items.filter((_, i) => i !== index);
+    setItems(nuevosItems);
+  };
+
+  
+  const marcarComprado = (index) => {
+    const nuevosItems = [...items];
+    nuevosItems[index].comprado = !nuevosItems[index].comprado;
+    setItems(nuevosItems);
+
+    const sortedItems = nuevosItems.sort((a, b) => a.comprado - b.comprado);
+    setItems(sortedItems);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <h1>Lista de Compras</h1>
+      <ItemInput agregarItem={agregarItem} />
+      <ItemList
+        items={items} 
+        eliminarItem={eliminarItem} 
+        marcarComprado={marcarComprado}
+      />
     </div>
   );
 }
 
-export default App;
+export default ListaDeCompras;
+
+
+
