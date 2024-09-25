@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
+Este proyecto está desplegado en GitHub Pages. Puedes verlo aquí: [Ver la página en GitHub Pages](https://taliazurbriggen.github.io/TP2/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 ## Available Scripts
 
