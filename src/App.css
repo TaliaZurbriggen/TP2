@@ -61,15 +61,15 @@ h1{
 
 .lista li {
   padding: 10px 0;
-  display: flex; /* Alinea horizontalmente los elementos dentro del li */
-  align-items: center; /* Alinea los elementos verticalmente al centro */
+  display: flex; 
+  align-items: center; 
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: normal;
-  margin-bottom: 10px; /* Espacio entre cada elemento de la lista */
+  margin-bottom: 10px; 
 }
 
 .lista li button {
-  margin-left: 10px; /* Espacio entre el texto y el botón */
+  margin-left: 10px; 
   font-size: 12px;
   cursor:pointer;
   background-color: #fff;
