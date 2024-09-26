@@ -52,12 +52,12 @@ h1{
 }
 
 .contenedorInputs input[type="text"] {
-  width: 60%; /* El input de texto será más grande */
+  width: 60%; 
   
 }
 
 .contenedorInputs input[type="number"] {
-  width: 20%; /* El input numérico será más pequeño */
+  width: 20%; 
 }
 
 .contenedorButton button:hover {
